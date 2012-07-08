@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h4>Case Study</h4>
+    <p class="intro">
+        This website itself is authored in SHPAML.  I
+        preprocess SHPAML documents into templates that Django
+        then renders.  Many of the pages on the site are fairly
+        static in nature, but I do exercise most of Django's
+        core features in my SHPAML documents, such as inheritance,
+        iteration, and variable interpolation.
+    </p>
+    <p>
+      Most of the examples that follow are from this website, but
+      the first one was contributed by another user.  (If anyone
+      has examples they'd like to share, please contact the mailing
+      list.)
+    </p>
+
+
+    <table class="long_example">
+        <tr>
+            <th>input</th>
+            <th>output</th>
+        </tr>
+
+        {% for example in examples %}
+            <tr>
+                <td>
+                    <b>{{ example.fn }}.shpaml</b>
+                    <pre>
+                        {{ example.input }}
+                    </pre>
+                </td>
+                <td>
+                    <b>{{ example.fn }}.html</b>
+                    <pre>
+                        {{ example.output }}
+                    </pre>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

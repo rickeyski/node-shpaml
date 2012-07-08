@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+var shpaml=require("../lib/shpaml").SHPAML,nopt=require("nopt"),fs=require("fs"),opt={outfile:Boolean,version:Boolean},parsed=nopt(opt);function die(b){console.warn(b);console.warn("Usage: "+process.argv[1]+" file.shpaml ...");process.exit(1)}
+function convertFile(b){var c=b.split(".");fs.readFile(b,function(b,a){b?console.error(b):(239===a[0]&&(187===a[1]&&191===a[2])&&(a=a.slice(3)),a=a.toString("utf8"),parsed.outfile?fs.writeFile(c[0]+".html",shpaml.convert_text(a),function(a){a&&console.error(a)}):console.log(shpaml.convert_text(a)))})}parsed.version?(console.log(shpaml.version),process.exit(0)):parsed.argv.remain.length||die("No files specified.");parsed.argv.remain.forEach(convertFile);

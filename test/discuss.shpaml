@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+    p
+        We have a mailing list
+        a href="http://groups.google.com/group/shpaml" | here
+        if you have questions.
+
+    p
+        Please help me make this product better.  
+        Here is what would help:
+    ul
+        li
+            Simply tell me that you are using it via the mailing 
+            list!  This will help me to prioritize the project.
+        li
+            Send feedback and questions to the mailing list.
+        li
+            Tell your friends about it.
+        li
+            Suggest patches or improvements.
+    p
+        Thanks, 
+        i | Steve Howell
+{% endblock %}

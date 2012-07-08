@@ -1,0 +1,39 @@
+{
+    "name": "SHPAML",
+    "description": "the unHaml haml",
+    "homepage": "http://shpaml.webfactional.com",
+    "keywords": [
+        "html simple"
+    ],
+    "version": "0.0.1",
+    "author" : "Rickey Visinski",
+    "contributor": [
+        "Steve Howell <>"
+    ],
+    "bin": {
+        "shpaml": "./bin/shpaml.js"
+    },
+    "main": "./lib/shpaml.js",
+    "dependencies": {
+        "nopt": "~1.0.0"
+    },
+    "engines": {
+        "node": ">=0.4.12"
+    },
+    "directories": {
+        "lib": "./lib"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/rickeyski/node-shpaml.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rickeyski/node-shpaml/issues"
+    },
+    "licenses": [
+        {
+            "type": "Modified MIT / BSD",
+            "url": "https://github.com/rickeyski/node-shpaml/blob/master/LICENSE"
+        }
+    ]
+}
