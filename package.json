@@ -32,7 +32,7 @@
     },
     "licenses": [
         {
-            "type": "Modified MIT / BSD",
+            "type": "MIT",
             "url": "https://github.com/rickeyski/node-shpaml/blob/master/LICENSE"
         }
     ]
